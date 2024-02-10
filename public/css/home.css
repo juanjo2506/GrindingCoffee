@@ -1,0 +1,522 @@
+:root{
+    --colorTittleClear: #ffebda;
+    --fondoGeneral: #ffffff96;
+    --colorTittleDark: #5c2f05;
+    --colorText: #833f00;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ESTILOS - BARRA DE OPCIONES */
+body{
+    width: 100%;
+}
+
+main{
+    padding-top: 68px;
+}
+
+i{
+    margin-left: 8px;
+}
+
+/*/////////////////// NAV ///////////////////*/
+header{
+    overflow: hidden;
+    background-color: var(--colorTittleClear);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.containerNav{
+    width: 90%;
+    margin: auto;
+    padding: 8px 0 8px 0;
+    height: 68px;
+}
+
+#logoHeader{
+    width: 80px;
+}
+
+#logoHeader a img{
+    width: 100%;
+}
+
+.flexBoxNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--colorText);
+}
+/* ESTILOS DEL HEADER COMO TAL */
+
+/* Fondo del header */
+.headerImg{
+    display: flex;
+    background-image: url(/img/fondoimg.jpg);
+    width: 100%;
+    height: 39rem;
+    background-size: cover;
+}
+
+
+/* Texto del header */
+
+.headerImg h1{
+    padding-left: 15rem;
+    padding-right: 15rem;
+    text-align: center;
+    padding-top: 16rem;
+    font-size: 8rem;
+    font-weight: bold;
+    color: var(--colorTittleClear);
+    /* ESTO FUE LO QUE MODIFIQUE */
+    width: 100%;
+}
+
+
+
+
+/* ESTILOS PRODUCTOS PRINCIPALES AL INICIO DEL MAIN*/
+
+main{
+    padding-top: 2rem;
+    background-color: #ffebda;
+    padding-bottom: 5rem;
+}
+
+main .container{
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+main .container::-webkit-scrollbar{
+    width: 0;
+}
+
+
+main .recetas::-webkit-scrollbar{
+    width:  0;
+}
+
+main .product{
+    background-color: #ffffff96;
+    margin: 1rem;
+    border-radius: 2rem 2rem 1rem 1rem;
+    height: 20rem;
+    width: 15rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+main .product:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+}
+
+main .product a img{
+    width: 15rem;
+    height: 12rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+main .product p{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    font-weight: bold;
+    color: #844000;
+}
+
+
+/* ESTILOS DE 2 IMG GRANDES */
+
+main .container-img{
+    display: flex;
+    margin-top: 3rem;
+
+}
+main .container-img .box1{
+    background-image: url(/img/img-box1.png);
+    width: 50%;
+    height: 30rem;
+}
+main .container-img .box2{
+    background-image: url(/img/img-box2.png);
+    width: 50%;
+    height: 30rem;
+}
+
+main .container-img .box h3{
+    text-align: center;
+    padding-top: 12rem;
+    font-size: 4rem;
+    color: #fff4ea;
+    padding-bottom: 3rem;
+}
+
+main .container-img .box  a{
+    /* display: flex; */
+    padding-left: 48%;
+    padding-top: 4rem;
+    font-size: 2rem;
+    color: #ffebda;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* ESTILOS PARA MAS PRODUCTOS */
+
+main .recetas{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    /* ESTO FUE LO QUE MODIFIQUE */
+    overflow: scroll;
+}
+
+
+/* ESTILOS DE PRODUCTO WINNER */
+
+main .winner{
+    padding-top: 3rem;
+    display: flex;
+    padding-bottom: 5rem;
+    margin-left: 7rem;
+    margin-right: 5rem;
+    flex-wrap: wrap;
+}
+
+main .winner img{
+    width: 100%;
+    padding: 4.5rem;
+    border-radius: 7rem;
+}
+
+.linkImg{
+    width: 65%;
+}
+
+
+main .winner .descrip-winner{
+/*     padding-top: 2rem;
+    padding-right: 5rem; */
+    /* display: flex; */
+    /* esto se cambio tambien */
+    width: 35%;
+}
+
+
+main .winner  .descrip-winner h1{
+    padding-top: 5rem;
+/*     font-size: 3rem; */
+    font-size: 2rem;
+    color: #5c2f05;
+    padding-bottom: 2.4rem;
+}
+
+main .winner .descrip-winner p{
+/*     font-size: 1.8rem; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #833f00;
+    padding-bottom: 3rem;
+}
+
+main .winner .descrip-winner a{
+/*     font-size: 1.5rem; */
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffebda;
+    background-color: #5c2f05;
+    padding: 1.1rem;
+    border: 4px solid #ffebda;
+}
+main .winner .descrip-winner a:hover{
+    background-color: #e77a15;
+}
+
+ /* ESTILOS CARRUCEL Argb(118, 61, 7)CO */
+
+ main .marquee-img{
+    display: flex;
+    /* justify-content: center; */
+ }
+ main .marquee-img .marq-box img{
+    width: 20rem;
+    margin: 3rem;
+    flex-direction: center;
+    border-radius: 5px;
+    /*justify-content: center; */
+ }
+
+ .category{
+    text-align: center;
+    margin-top: 15px;
+    color: #833f00;
+ }
+
+
+
+/* /////////////////// FOOTER /////////////////// */
+.flexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+footer{
+    background-color: var(--colorTittleDark);
+    color: var(--colorTittleClear);
+}
+
+footer a{
+    color: var(--colorTittleClear);
+    text-decoration: none;
+}
+
+.socialMedia i{
+    padding: 8px;
+}
+
+.copy{
+    padding-top: 40px;
+    text-align: center;
+}
+
+footer .flexBox{
+    justify-content: flex-end;
+}
+
+.navFooter{
+    padding-right: 48px;
+}
+
+.navFooter li{
+    padding: 8px;
+}
+
+ /* MOBILE */
+
+ @media only screen and (max-width: 781px) {
+    /* Estilos específicos para pantallas hasta 781px */
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    header .headerImg h1 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 2.5rem;
+    }
+
+    main .container {
+        padding: 0.5rem;
+    }
+
+    main .container .product {
+        background-color: #ffffff96;
+        margin: 0.5rem;
+        border-radius: 1rem;
+        width: calc(50% - 1rem);
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+        cursor: default;
+        transition: all 400ms ease;
+    }
+
+    main .container .product a img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+    }
+
+    main .container .product p {
+        font-size: 1rem;
+        padding: 0.5rem;
+        height: auto;
+        max-height: 5rem; /* Ajusta según sea necesario */
+        overflow: hidden;
+    }
+
+    main .recetas .product {
+        width: calc(50% - 1rem);
+        margin: 0.5rem;
+    }
+
+    main .recetas .product a img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+    }
+
+    main .recetas .product p {
+        font-size: 1rem;
+        padding: 0.5rem;
+        height: auto;
+        max-height: 5rem; /* Ajusta según sea necesario */
+        overflow: hidden;
+    }
+
+    main .container-img {
+        flex-direction: column;
+    }
+
+    main .container-img .box1,
+    main .container-img .box2 {
+        width: 100%;
+        height: 15rem; /* Ajusta la altura según sea necesario */
+    }
+
+    main .container-img .box h3 {
+        padding-top: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    main .container-img .box a {
+        padding-left: 50%; /* Ajusta según sea necesario para centrar */
+        transform: translateX(-50%); /* Centra el botón */
+        padding-top: 1rem;
+        font-size: 1.2rem;
+
+        
+    }
+
+    main .recetas {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    main .winner {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    main .winner img {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        border-radius: 3rem;
+    }
+
+    main .winner .descrip-winner {
+        width: 100%;
+        padding-top: 0.5rem;
+    }
+
+    main .winner .descrip-winner h1 {
+        padding-top: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    main .winner .descrip-winner p {
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    main .winner .descrip-winner a {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem; /* Ajusta el padding según sea necesario */
+        display: inline-block; /* Permite ajustar el ancho */
+        margin-top: 1rem;
+        text-align: center;
+        width: auto; /* Ancho automático según el contenido */
+        max-width: 100%; /* Evita que el botón sea más ancho que el contenedor */
+    }
+
+    main .marquee-img {
+        justify-content: center;
+    }
+
+    main .marquee-img .marq-box img {
+        width: 8rem; /* Ajusta el tamaño según sea necesario */
+        margin: 0.5rem;
+    }
+
+    /* Footer */
+
+    footer {
+        background-color: var(--colorTittleDark);
+        color: snow;
+        padding: 1rem;
+        position: relative;
+        z-index: 1; /* Asegura que el footer esté por encima del contenido */
+    }
+    
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    footer .flexBox {
+        display: flex;
+    }
+    
+    footer section {
+        text-align: center;
+    }
+    
+    footer .navFooter ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    footer .navFooter li {
+        margin: 0.5rem;
+    }
+    
+    footer .navFooter a {
+        color: snow;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    
+    footer .socialMedia {
+        display: flex;
+        margin-left: auto;
+    }
+    
+    footer .socialMedia div {
+        margin: 0 0.5rem;
+    }
+    
+    footer .copy {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+}

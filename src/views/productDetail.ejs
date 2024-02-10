@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head", {title:"Grinding Coffee", css:"detail"}) %>
+
+<body>
+    <!--/////////////////// HEADER ///////////////////-->
+    <%- include("partials/nav.ejs") %>
+    <!--/////////////////// MAIN ///////////////////-->
+    <main>
+        <!--/////////////////// PRODUCT DETAIL ///////////////////-->
+        <section class="productDetail">
+            <div class="gallery">
+                <img src="/img/products/<%= singleProduct.image %>" alt="">
+                <!--<img src="/img/producto.jpg" alt="">
+                <img src="/img/producto.jpg" alt="">
+                <img src="/img/producto.jpg" alt="">
+                <img src="/img/producto.jpg" alt="">-->
+            </div>
+            <article class="product">
+                <h1 class="titleProduct"><%= singleProduct.name %></h1>
+                <p class="descriptionProduct"><%= singleProduct.description %></p>
+                <p class="descriptionProduct">Precio del Producto: <%= singleProduct.price %> $</p>
+                <p class="descriptionProduct">Tamaño del producto: <%= singleProduct.size %> Gr</p>
+                <button class="addCart" type="submit">Agregar al carrito</button>
+                <a class="addCart" href="/products/edit/<%= singleProduct.id %>">Editar Producto</a>
+                <form action="/products/delete/<%= singleProduct.id %>?_method=DELETE" method="POST">
+                    <button class="addCart" type="submit">Borrar Producto</button>
+                </form>
+            </article>
+        </section>
+
+        <!--/////////////////// RELATED PRODUCTS ///////////////////-->
+        <div class="container">
+            <section class="relatedProducts">
+                <h2 class="titleSection">Produtos relacionados</h2>
+                <div class="flexBox">
+                    <% relatedProducts.forEach(product => {%>
+                        
+                        <article class="card">
+                            <a href="/products/detail/products/<%= product.id %>"><img src="/img/products/<%= product.image %>" alt=""></a>
+                            <h2><%= product.name%></h2>
+                            <p><%= product.description %></p>
+                            <p class="price"><%= product.price %> $</p>
+                        </article>
+                        <%}); %>
+                 <!--    <article class="card">
+                        <img src="/img/producto.jpg" alt="">
+                        <h2>Nombre del producto</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <p class="price">10.000 $</p>
+                    </article>
+                    <article class="card">
+                        <img src="/img/producto.jpg" alt="">
+                        <h2>Nombre del producto</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <p class="price">10.000 $</p>
+                    </article>
+                    <article class="card">
+                        <img src="/img/producto.jpg" alt="">
+                        <h2>Nombre del producto</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <p class="price">10.000 $</p>
+                    </article>
+                    <article class="card">
+                        <img src="/img/producto.jpg" alt="">
+                        <h2>Nombre del producto</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <p class="price">10.000 $</p>
+                    </article> -->
+                </div>
+
+            </section>
+        </div>
+        <!--/////////////////// COMMENTS ///////////////////-->
+        <div class="container">
+            <section class="comments">
+                <h2 class="titleSection">¿Que dicen los que compraron este producto?</h2>
+                <div class="flexBox">
+                    <article class="comment">
+                        <h2>Sheldon Strickland</h2>
+                        <div class="calification">
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa mollitia laudantium provident
+                            odiosequi enim laborum, distinctio reiciendis consequuntur officiis, dignissimos architecto
+                            delectus
+                            laboriosam aliquam ad minus quae iusto nobis!</p>
+                    </article>
+                    <article class="comment">
+                        <h2>Vickie Ortega</h2>
+                        <div class="calification">
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa mollitia laudantium provident
+                            odiosequi enim laborum, distinctio reiciendis consequuntur officiis, dignissimos architecto
+                            delectus
+                            laboriosam aliquam ad minus quae iusto nobis!</p>
+                    </article>
+                    <article class="comment">
+                        <h2>Elena Page</h2>
+                        <div class="calification">
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa mollitia laudantium provident
+                            odiosequi enim laborum, distinctio reiciendis consequuntur officiis, dignissimos architecto
+                            delectus
+                            laboriosam aliquam ad minus quae iusto nobis!</p>
+                    </article>
+                    <article class="comment">
+                        <h2>Sylvia Moss</h2>
+                        <div class="calification">
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                            <div class="start"><i class="fa-solid fa-star"></i></div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa mollitia laudantium provident
+                            odiosequi enim laborum, distinctio reiciendis consequuntur officiis, dignissimos architecto
+                            delectus
+                            laboriosam aliquam ad minus quae iusto nobis!</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!--/////////////////// FOOTER ///////////////////-->
+    <%- include("partials/footer.ejs") %>
+</body>
+
+</html>

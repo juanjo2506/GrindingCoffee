@@ -1,0 +1,341 @@
+:root{
+    --colorTittleClear: #ffebda;
+    --fondoGeneral: #ffffff96;
+    --colorTittleDark: #5c2f05;
+    --colorText: #833f00;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+/*     color: #833f00; */
+}
+
+body{
+    width: 100%;
+    background-color: #ffffff96;
+}
+
+main{
+    padding-top: 68px;
+}
+
+i{
+    margin-left: 8px;
+}
+/*/////////////////// NAV ///////////////////*/
+header{
+    overflow: hidden;
+    background-color: var(--colorTittleClear);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.containerNav{
+    width: 90%;
+    margin: auto;
+    padding: 8px 0 8px 0;
+    height: 68px;
+}
+
+#logoHeader{
+    width: 80px;
+}
+
+#logoHeader a img{
+    width: 100%;
+}
+
+.flexBoxNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--colorText);
+}
+
+
+
+/* /////////////////// FORM /////////////////// */
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.flexBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mainTitle{
+    font-size: 32px;
+    color: var(--colorText);
+    text-align: center;
+    padding-bottom: 52px;
+}
+
+.inputGroup{
+    margin-bottom: 16px;
+}
+
+.inputDefault{
+    width: 100%;
+    height: 46px;
+    border-radius: 4px;
+    padding: 16px;
+    border: 1px #b4b4b4 solid;
+    font-size: 16px;
+}
+
+.errorFeedback{
+    color: red;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+label{
+    font-weight: 600;
+    padding-top: 40px;
+}
+.remember_user{
+    padding-top: 0px;
+}
+
+.buttonGroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainButton{
+    width: 100%;
+    margin: 2% 0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--colorText);
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mainButton:hover{
+    background-color: var(--colorTittleDark);
+    
+}
+
+.secondaryButton{
+    width: 100%;
+    margin: 2% 0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--colorText);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: var(--colorText);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondaryButton:hover{
+    background-color: var(--colorTittleDark);
+    color: #ffffff;
+} 
+
+/* /////////////////// FOOTER /////////////////// */
+.flexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+footer{
+    background-color: var(--colorTittleDark);
+    color: var(--colorTittleClear);
+}
+
+footer a{
+    color: var(--colorTittleClear);
+    text-decoration: none;
+}
+
+.socialMedia i{
+    padding: 8px;
+}
+
+.copy{
+    padding-top: 40px;
+    text-align: center;
+}
+
+footer .flexBox{
+    justify-content: flex-end;
+}
+
+.navFooter{
+    padding-right: 48px;
+}
+
+.navFooter li{
+    padding: 8px;
+}
+
+@media screen and (min-width: 326px) and (max-width: 750px){
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    header nav ul{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    header nav ul li{
+        margin: 0.2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    header nav ul li a{
+        text-decoration: none;
+/*         color: rgb(21, 21, 34); */
+        font-size: 1rem;
+/*         font-weight: bold; */
+    }
+
+    header .headerImg{
+        display: flex;
+        background-image: url(/img/fondoimg.jpg);
+        width: 100%;
+        height: 20rem;
+    }
+
+    header .headerImg h1{
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        padding-top: 9rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #ffebda;
+    }
+
+    main .cajalogin {
+        width: 80%; /* Ajusta el ancho según sea necesario */
+        margin: 5% auto;
+    }
+
+    main .inputlogin {
+        width: 80%; /* Ajusta el ancho según sea necesario */
+        margin: 5% auto;
+    }
+
+    main .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .botones a,
+    main .botones button {
+        width: 70%; /* Ajusta el ancho según sea necesario */
+        margin: 2% 0;
+        padding: 1rem; /* Ajusta el padding según sea necesario */
+        font-size: 1rem; /* Ajusta el tamaño de fuente según sea necesario */
+    }
+
+    main .h3 {
+        width: 80%; /* Ajusta el ancho según sea necesario */
+        margin: 0% auto 5%;
+    }
+
+    main .marca {
+        margin-left: 5%;
+        text-align: left;
+    }
+
+    footer {
+        background-color: var(--colorTittleDark);
+        color: snow;
+        padding: 1rem;
+        position: relative;
+        z-index: 1; /* Asegura que el footer esté por encima del contenido */
+    }
+    
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    footer .flexBox {
+        display: flex;
+    }
+    
+    footer section {
+        text-align: center;
+    }
+    
+    footer .navFooter ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    footer .navFooter li {
+        margin: 0.5rem;
+    }
+    
+    footer .navFooter a {
+        color: snow;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    
+    footer .socialMedia {
+        display: flex;
+        margin-left: auto;
+    }
+    
+    footer .socialMedia div {
+        margin: 0 0.5rem;
+    }
+    
+    footer .copy {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+
+ }
