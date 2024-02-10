@@ -93,7 +93,7 @@
   "id": 42,
   "name": "Cafe comun molido",
   "price": 1900,
-  "category": "",
+  "category": "Cafe en grano",
   "size": "250",
   "description": "Cafe comun de consumo diario",
   "image": "productImage-1705950828187.jpg"
